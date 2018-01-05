@@ -4,34 +4,35 @@
 
 <br>
 
-<%= link_to 'New Event', new_event_path %>
 
-<div class="card-deck">
-  <div class="card">
-    <%= image_tag ("boattetons-2.jpg"),width: 300,  alt: "Profile Image", class: "card-img-top" %>
-    <div class="card-body">
-      <h5 class="card-title">Graduation</h5>
-      <p class="card-text">January 5th | Bottega </p>
+<script src="https://use.fontawesome.com/da79857de9.js"></script>
+
+
+
+
+<div class="album">
+  <div class="container">
+      <% @event_items.each do |event| %>
+        <div class="col-md-12">
+            <div class="card-deck">
+              <div class="card">
+                <%= image_tag ("boattetons-2.jpg"),width: 300,  alt: "Profile Image", class: "card-img-top" %>
+                <div class="card-body">
+                  <h5 class="card-title"><%= event.title %></h5>
+                  <p class="card-text"><%= event.date %></p>
+                    <%# <a href="eventsreshow"><i class="fa fa-plus" aria-hidden="true"></i></a> %>
+                    <%= link_to 'Learn More', event %>
+                </div>
+              </div>
+            </div>
+        </div>
+      <% end %>
     </div>
   </div>
 
-   <div class="card">
-    <%= image_tag ("boattetons-2.jpg"),width: 300,  alt: "Profile Image", class: "card-img-top" %>
-    <div class="card-body">
-      <h5 class="card-title">Graduation</h5>
-      <p class="card-text">January 5th | Bottega </p>
-      <button type="button" class="btn btn-primary">Primary</button>
 
-    </div>
-  </div>
 
-  <div class="card">
-    <%= image_tag ("boattetons-2.jpg"),width: 300,  alt: "Profile Image", class: "card-img-top" %>
-    <div class="card-body">
-      <h5 class="card-title">Graduation</h5>
-      <p class="card-text">January 5th | Bottega </p>
-    </div>
-  </div>
+
+<div class= "blah">
+    <%= link_to 'New Event', new_event_path, class: "btn btn-success btn-block"%>
 </div>
-
-<br>
