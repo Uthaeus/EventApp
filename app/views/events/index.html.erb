@@ -14,17 +14,17 @@
   <div class="container">
       <% @event_items.each do |event| %>
         <div class="col-md-12">
-            <div class="card-deck">
-              <div class="card">
-                <%= image_tag ("boattetons-2.jpg"),width: 300,  alt: "Profile Image", class: "card-img-top" %>
-                <div class="card-body">
-                  <h5 class="card-title"><%= event.title %></h5>
-                  <p class="card-text"><%= event.date %></p>
-                    <%# <a href="eventsreshow"><i class="fa fa-plus" aria-hidden="true"></i></a> %>
-                    <%= link_to 'Learn More', event %>
-                </div>
+          <div class="card-deck">
+            <div class="card">
+              <%= image_tag ("boattetons-2.jpg"),width: 300,  alt: "Profile Image", class: "card-img-top" %>
+              <div class="card-body">
+                <h5 class="card-title"><%= event.title %></h5>
+                <p class="card-text"><%= event.date %></p>
+                  <%# <a href="eventsreshow"><i class="fa fa-plus" aria-hidden="true"></i></a> %>
+                  <%= link_to 'Learn More', event %>
               </div>
             </div>
+          </div>
         </div>
       <% end %>
     </div>
